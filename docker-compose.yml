@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    container_name: riesgo-api
+    ports:
+      - "8000:8000"
+
+  agente:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.agente
+    container_name: riesgo-agente
+    ports:
+      - "7860:7860"
+    environment:
+      URL_API: http://api:8000
+      OLLAMA_HOST: http://host.docker.internal:11434
+      MODELO_LLM: qwen2.5-coder:7b
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      api:
+        condition: service_healthy

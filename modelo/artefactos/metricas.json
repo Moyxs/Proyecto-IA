@@ -1,0 +1,85 @@
+{
+  "modelo_seleccionado": "Árbol de decisión (max_depth=4)",
+  "metricas_prueba": {
+    "accuracy": 0.7016,
+    "precision_macro": 0.6796,
+    "recall_macro": 0.7228,
+    "f1_macro": 0.687,
+    "f1_weighted": 0.7083,
+    "matriz_confusion": [
+      [
+        2600,
+        482,
+        142
+      ],
+      [
+        1818,
+        6245,
+        1257
+      ],
+      [
+        665,
+        701,
+        3066
+      ]
+    ],
+    "reporte": {
+      "Riesgo bajo": {
+        "precision": 0.5115089514066496,
+        "recall": 0.8064516129032258,
+        "f1-score": 0.6259780907668232,
+        "support": 3224.0
+      },
+      "Riesgo medio": {
+        "precision": 0.8407377490576198,
+        "recall": 0.6700643776824035,
+        "f1-score": 0.7457606878433246,
+        "support": 9320.0
+      },
+      "Riesgo alto": {
+        "precision": 0.6866741321388578,
+        "recall": 0.6917870036101083,
+        "f1-score": 0.6892210857592447,
+        "support": 4432.0
+      },
+      "accuracy": 0.7016376060320453,
+      "macro avg": {
+        "precision": 0.6796402775343756,
+        "recall": 0.7227676647319125,
+        "f1-score": 0.6869866214564642,
+        "support": 16976.0
+      },
+      "weighted avg": {
+        "precision": 0.7379901292525607,
+        "recall": 0.7016376060320453,
+        "f1-score": 0.7082511090608504,
+        "support": 16976.0
+      }
+    }
+  },
+  "comparacion": {
+    "Árbol de decisión (max_depth=4)": {
+      "accuracy": 0.7016,
+      "precision_macro": 0.6796,
+      "recall_macro": 0.7228,
+      "f1_macro": 0.687,
+      "f1_weighted": 0.7083
+    },
+    "SVC rbf (muestra 20000)": {
+      "accuracy": 0.6948,
+      "precision_macro": 0.6778,
+      "recall_macro": 0.7106,
+      "f1_macro": 0.6768,
+      "f1_weighted": 0.7014
+    },
+    "KNN (k=51)": {
+      "accuracy": 0.6888,
+      "precision_macro": 0.6627,
+      "recall_macro": 0.6717,
+      "f1_macro": 0.661,
+      "f1_weighted": 0.6929
+    }
+  },
+  "registros_usados": 84938,
+  "fecha_entrenamiento": "2026-11-26T23:31:22"
+}
